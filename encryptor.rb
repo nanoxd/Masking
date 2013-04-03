@@ -16,17 +16,12 @@ class Encryptor
   end
   
   def encrypt(string)
-    # Cuts the input string into letters
     letters = string.split("")
     
-    # Encrypts letters one at a time
-    results = []
-    letters.each do |letter|
+    results = letters.collect do |letter|
       encrypted_letter = encrypt_letter(letter)
-      results.push(encrypted_letter)
     end
     
-    # Join the results back together in one string
     results.join
   end
   
