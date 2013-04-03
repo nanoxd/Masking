@@ -30,4 +30,12 @@ class Encryptor
     cipher.key(lowercase_letter)
   end
 
+  def decrypt(string)
+    letters = string.split("")
+
+    results = letters.collect { |letter| decrypted_letters = decrypt_letter(letter) }
+
+    results.join
+  end
+
 end
