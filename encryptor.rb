@@ -1,9 +1,5 @@
 class Encryptor
-<<<<<<< HEAD
-=======
-    attr_accessor :rotation
-
->>>>>>> Change cipher method to accept a rotation other than 13
+  attr_accessor :rotation
 
   def cipher
     characters = ('a'..'z').to_a
@@ -20,7 +16,6 @@ class Encryptor
   end
 
   def encrypt_letter(letter)
-
     lowercase_letter = letter.downcase
     cipher[lowercase_letter]
   end
@@ -35,7 +30,6 @@ class Encryptor
     results.join
   end
 
-<<<<<<< HEAD
   def decrypt_letter(letter)
     lowercase_letter = letter.downcase
     cipher.key(lowercase_letter)
@@ -49,6 +43,4 @@ class Encryptor
     results.join
   end
 
-=======
->>>>>>> Change cipher method to accept a rotation other than 13
 end
